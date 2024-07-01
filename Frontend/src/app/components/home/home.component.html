@@ -1,0 +1,48 @@
+<nav class="py-4 px-20 shadow-lg fixed w-[100%] top-0">
+  <div class="flex flex-row justify-between w-full">
+    <svg
+      width="80px"
+      height="80px"
+      viewBox="2.096 -27.722 295.809 295.809"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M196.489 18.773c23.334 0 42.253 98.376 42.253 219.73h33.81c0-130.692-34.059-236.635-76.062-236.635-23.899 0-45.221 31.84-59.163 81.629-13.939-49.789-35.268-81.629-59.165-81.629-42.003 0-76.066 105.943-76.066 236.635H35.91c0-121.354 18.921-219.73 42.252-219.73 23.338 0 42.264 90.809 42.264 202.834h33.802c.001-112.025 18.921-202.834 42.261-202.834M289.475 221.607c4.586 0 8.43 3.631 8.43 8.408 0 4.853-3.844 8.486-8.43 8.486-4.602 0-8.478-3.635-8.478-8.486 0-4.777 3.876-8.408 8.478-8.408m0 15.661c3.884 0 6.9-3.121 6.9-7.25 0-4.057-3.018-7.174-6.9-7.174-3.932 0-6.945 3.117-6.945 7.174-.001 4.128 3.013 7.25 6.945 7.25zm-3.287-12.159h3.809c2.331 0 3.43.928 3.43 2.82 0 1.785-1.114 2.531-2.574 2.686l2.804 4.367h-1.646l-2.672-4.248h-1.616v4.248h-1.533l-.002-9.873zm1.534 4.386h1.597c1.345 0 2.584-.067 2.584-1.632 0-1.313-1.124-1.519-2.157-1.519h-2.022l-.002 3.151z"
+        fill="#ffc300"
+      />
+    </svg>
+    <div class="flex justify-between items-center w-1/4">
+      <input
+        *ngIf="this.router.isActive('/', true)"
+        type="text"
+        placeholder="Search..."
+        class="h-1/2 me-10"
+        #filter
+        (input)="filterResults(filter.value)"
+      />
+      <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+      <button (click)="logout()" title="logout">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="white"
+          class="bi bi-box-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<section class="px-20 my-40">
+  <router-outlet name="dashboard"></router-outlet>
+</section>

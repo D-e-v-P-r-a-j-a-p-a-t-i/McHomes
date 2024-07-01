@@ -1,0 +1,36 @@
+.listing {
+  background: var(--color-primary);
+  padding-bottom: 30px;
+}
+.listing-heading {
+  color: var(--color-secondary);
+  font-size: x-large;
+  font-weight: 500;
+  padding: 10px 20px 0 20px;
+}
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.listing-location {
+  font-style: italic;
+  padding: 10px 20px;
+}
+.listing-location::before {
+  content: url("/src/assets/geo-alt-fill.svg") / "";
+}
+
+section.listing a {
+  padding-left: 20px;
+  color: var(--color-secondary);
+}
+
+section.listing a:hover {
+  color: brown;
+}
+
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}

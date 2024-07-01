@@ -1,0 +1,145 @@
+.listing-photo {
+  height: 600px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 30px;
+  float: right;
+}
+
+.listing-heading {
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--color-secondary);
+}
+
+.listing-location::before {
+  content: url('/assets/location-pin.svg') / '';
+}
+
+.listing-location {
+  font-size: 24pt;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.listing-features > .section-heading {
+  color: var(--color-primary);
+  font-size: 25pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.listing-features {
+  margin-bottom: 20px;
+}
+
+.listing-features li {
+  font-size: 14pt;
+}
+
+li {
+  list-style-type: none;
+}
+
+.listing-apply > .section-heading {
+  font-size: 10pt;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+/* .listing-apply > .section-heading{
+  color: var(--color-primary);
+  font-size: x-large;
+  font-weight: bold;
+} */
+
+.listing-apply button{
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: large;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.listing-apply button:hover{
+  color: var(--color-primary);
+  font-weight: bold;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* .listing-apply button:first-child:hover{
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.listing-apply button:nth-child(2){
+  color: var(--color-secondary);
+  font-weight: bold;
+  background-color: whitesmoke;
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.listing-apply button:nth-child(2):hover{
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.listing-apply button:last-child{
+  color: var(--color-primary);
+  font-weight: bold;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.listing-apply button:last-child:hover{
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+} */
+
+label, input {
+  display: block;
+}
+
+label {
+  color: var(--color-secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+input {
+  color: var(--color-secondary);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 400px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid rgb(236, 181, 181) 3px;
+}
+
+input:focus, input:hover{
+  outline: none;
+  background-color: rgba(228, 226, 202, 0.543);
+}
+
+
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
+  }
+}

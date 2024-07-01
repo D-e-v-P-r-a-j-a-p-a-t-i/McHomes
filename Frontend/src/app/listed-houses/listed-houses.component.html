@@ -1,0 +1,6 @@
+<section class="results grid grid-cols-4 gap-10 my-12">
+  <app-housing-location
+    *ngFor="let housingLocation of filteredLocationList"
+    [housingLocation]="housingLocation"
+  ></app-housing-location>
+</section>

@@ -1,0 +1,22 @@
+input{
+  border-radius: 0;
+  color: var(--color-secondary) !important;
+  font-weight: 500;
+}
+label{
+  margin: 5px auto;
+}
+.card{
+  background-color: var(--color-primary-light);
+  color: var(--color-secondary-light);
+  font-size: large;
+}
+button{
+  background-color: var(--color-secondary);
+  color: var(--color-primary-light);
+}
+
+button:hover{
+  background-color: var(--color-secondary-light);
+  color: var(--color-primary-light);
+}

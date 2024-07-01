@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --color-primary: #ffc72c;
+    --color-primary-light: #fbd879;
+    --color-secondary: #da291c;
+    --color-secondary-light: #e95247;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+body{
+  background: #f5e2ac;
+}
+input{
+  background-color: #f8f4e6;
+  border-radius: 0;
+  color: var(--color-secondary) !important;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+input:hover{
+  outline: 2px solid var(--color-secondary-light);
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus{
+  outline: none;
+  outline: 2px solid var(--color-secondary-light);
+}
+.card{
+  box-shadow: 16px 16px;
+}

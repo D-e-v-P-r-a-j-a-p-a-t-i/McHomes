@@ -1,0 +1,85 @@
+<article class="p-8 ">
+  <img
+    class="listing-photo border-[#ffc72c] border-4 shadow-lg mt-5"
+    [src]="housingLocation?.photo"
+    alt="Exterior photo of {{ housingLocation?.name }}"
+  />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+    <p class="listing-location flex flex-row align-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="25"
+        fill="var(--color-primary)"
+        class="bi bi-geo-alt-fill mt-3 me-1"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+        />
+      </svg>
+      {{ housingLocation?.city }}, {{ housingLocation?.state }}
+    </p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>
+        Units available:
+        <span class="italic text-2xl text-[#c55353]">{{
+          housingLocation?.availableUnits
+        }}</span>
+      </li>
+      <li>
+        Does this location have wifi:
+        <span class="italic text-2xl text-[#c55353]">{{
+          housingLocation?.wifi
+        }}</span>
+      </li>
+      <li>
+        Does this location have laundry:
+        <span class="italic text-2xl text-[#c55353]">{{
+          housingLocation?.laundry
+        }}</span>
+      </li>
+    </ul>
+  </section>
+  <section class="listing-apply">
+    <p class="section-heading">
+      <button (click)="submitApplication()">Apply Now!</button>
+    </p>
+    <!-- <form
+      [formGroup]="applyForm"
+      (submit)="submitApplication()"
+      class="w-[430px] rounded-lg p-4 bg-white"
+    >
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" formControlName="firstName" />
+      <div *ngIf="applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched" class="bg-red-100 rounded-md p-2 mb-2">
+        <small *ngIf="applyForm.get('firstName')?.errors?.['required']" class="text-red-500 font-bold">First Name is required.</small>
+        <small *ngIf="applyForm.get('firstName')?.errors?.['pattern']" class="text-red-500 font-bold">Please enter a valid first name.</small>
+      </div>
+
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" formControlName="lastName" />
+      <div *ngIf="applyForm.get('lastName')?.invalid && applyForm.get('lastName')?.touched" class="bg-red-100 rounded-md p-2 mb-2">
+        <small *ngIf="applyForm.get('lastName')?.errors?.['required']" class="text-red-500 font-bold">Last Name is required.</small>
+        <small *ngIf="applyForm.get('lastName')?.errors?.['pattern']" class="text-red-500 font-bold">Please enter a valid last name.</small>
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <div *ngIf="applyForm.get('email')?.invalid && applyForm.get('email')?.touched" class="bg-red-100 rounded-md p-2 mb-2">
+        <small *ngIf="applyForm.get('email')?.errors?.['required']" class="text-red-500 font-bold">Email is required.</small>
+        <small *ngIf="applyForm.get('email')?.errors?.['email']" class="text-red-500 font-bold">Please enter a valid email address.</small>
+      </div>
+
+      <div class="flex flex-row justify-between">
+        <button type="submit">Apply now</button>
+        <button type="button" (click)="resetDetails()">Reset</button>
+        <button type="button" [routerLink]="['/']">Cancel</button>
+      </div>
+    </form> -->
+  </section>
+</article>
