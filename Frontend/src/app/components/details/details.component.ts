@@ -33,7 +33,7 @@ export class DetailsComponent {
     // submitApplication() {
     //   if (this.applyForm.invalid) {
     //     this.applyForm.markAllAsTouched();
-    //     return;
+    //     return;             
     //   }
     //   this.housingService.submitApplication(this.applyForm.value as Application);
     // }
